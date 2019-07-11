@@ -1,0 +1,27 @@
+{
+  "name": "word-counter-ts",
+  "version": "1.0.0",
+  "description": "A simple word count application to introduce students to TypeScript 🔡",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihi-r/word-counter-ts.git"
+  },
+  "author": "Mihir Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihi-r/word-counter-ts/issues"
+  },
+  "homepage": "https://github.com/mihi-r/word-counter-ts#readme",
+  "devDependencies": {
+    "browserify": "^16.3.0",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.5.3",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
