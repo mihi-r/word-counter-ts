@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Word Count</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Word Count</h1>
+      <form>
+        <textarea class="initial-input" id="initial-input" aria-label="Words to count" placeholder="Words to count"></textarea>
+        <input type="text" class="specific-word" id="specific-word" aria-label="Specific Word" placeholder="Specific Word" />
+        <button type="button" class="count-btn">Count</button>
+      </form>
+      <p class="word-count"></p>
+      <div class="parsed-input">
+        <h2>Parsed Input</h2>
+      </div>
+    </div>
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>
