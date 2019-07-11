@@ -1,4 +1,4 @@
-import parseInput from './parser.js';
+import parseInput from './parser';
 
 const intialInput: HTMLTextAreaElement = document.querySelector('.initial-input');
 const wordCount: HTMLParagraphElement = document.querySelector('.word-count');
