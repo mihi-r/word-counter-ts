@@ -1,4 +1,5 @@
-import parseInput from './parser';
+import { parseInput } from './parser';
+import { Preprocessor } from './preprocessor';
 
 const intialInput: HTMLTextAreaElement = document.querySelector('.initial-input');
 const wordCount: HTMLParagraphElement = document.querySelector('.word-count');
@@ -12,14 +13,14 @@ countButton.onclick = function countButtonOnClicked() {
     parsedInputUL.remove();
   }
 
-  let preprocessedInput: Array<string> = intialInput.value.trim().toLowerCase().replace(/(\.|,|!|\?|\(|\)|'|")/gm, '').split(' ');
-  preprocessedInput = preprocessedInput.filter(word => word !== '');
+  const preprocessor = new Preprocessor(intialInput.value);
+  preprocessor.splitWords();
 
-  parseInput(preprocessedInput, parsedInput, specificWord.value.toLowerCase());
+  parseInput(preprocessor.preprocessedInput, parsedInput, specificWord.value.toLowerCase());
 
   if (specificWord.value) {
-    preprocessedInput = preprocessedInput.filter(word => word === specificWord.value.toLowerCase());
+    preprocessor.onlyKeepSpecificWords(specificWord.value.toLowerCase());
   }
 
-  wordCount.textContent = `Word count: ${preprocessedInput.length}`;
+  wordCount.textContent = `Word count: ${preprocessor.getPreprocessedWordCount()}`;
 };

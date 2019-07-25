@@ -1,4 +1,4 @@
-export default function parseInput(input: Array<string>, parseContainer: HTMLDivElement, wordToHighlight = '') {
+export function parseInput(input: Array<string>, parseContainer: HTMLDivElement, wordToHighlight = '') {
   const ulNode: HTMLUListElement = document.createElement('ul');
 
   input.forEach((word) => {
